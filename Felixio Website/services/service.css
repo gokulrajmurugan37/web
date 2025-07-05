@@ -1,0 +1,137 @@
+
+ /* ==== Service Section ==== */
+.services {
+  padding: 4rem 10rem 6rem 10rem;
+  background-color: #fffdf9;
+}
+
+.service-section-header {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.service-section-header-h2 {
+  font-weight: 700;
+  color: #1a247c;
+  font-size: 1.875rem;
+}
+
+.service-section-header-h4 {
+  color: #007bff;
+  padding-bottom: 0.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.625rem;
+  padding: 3rem 1rem;
+}
+
+.grid-item {
+  display: flex;
+}
+
+/* Service Box */
+.service-box {
+  background-color: #fff;
+  padding: 2rem 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+}
+
+.service-box-h3 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.375rem;
+  margin-bottom: 10px;
+  padding: 1rem;
+  height: 5rem;
+  color: #1a1a1a;
+}
+
+.service-box-p {
+  font-size: 1.1rem;
+  color: #555;
+  padding: 1rem 0.8rem 3rem 0.8rem;
+  word-spacing: 0.0625rem;
+}
+
+.service-box.blue { border-top: 4px solid #007bff; }
+.service-box.orange { border-top: 4px solid #fd7e14; }
+.service-box.green { border-top: 4px solid #28a745; }
+.service-box.red { border-top: 4px solid #dc3545; }
+.service-box.purple { border-top: 4px solid #6f42c1; }
+.service-box.pink { border-top: 4px solid #e83e8c; }
+
+
+
+@media (max-width: 991px) {
+  .services {
+    padding: 3rem 4rem;
+  }
+
+  .service-section-header-h2 {
+    font-size: 1.5rem;
+  }
+
+  .service-box-h3 {
+    font-size: 1.25rem;
+  }
+
+  .service-box-p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 2.5rem 2rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.25rem;
+  }
+
+  .service-section-header-h2 {
+    font-size: 1.375rem;
+  }
+
+  .service-box {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    padding: 2rem 1rem;
+  }
+
+  .service-section-header-h2 {
+    font-size: 1.2rem;
+  }
+
+  .service-section-header-h4 {
+    font-size: 0.95rem;
+  }
+
+  .grid {
+    padding: 2rem 0.5rem;
+  }
+
+  .service-box-h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-box-p {
+    font-size: 1.1rem;
+    padding: 0.75rem 0.5rem 2rem 0.5rem;
+  }
+}

@@ -1,0 +1,23 @@
+<header id="header" class="header" role="banner" ng-controller="HeaderController">
+  <div class="header-div">
+    <a ui-sref="home" class="logo" aria-label="Felixio Home">
+      <span class="header-span">{{ siteName }}</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" ng-click="toggleMenu()">☰</button>
+
+    <nav class="navbar" ng-class="{ 'open': menuOpen }" role="navigation" aria-label="Main Navigation">
+      <ul class="navbar-ul">
+        <li class="navbar-li" ng-repeat="item in navItems">
+          <a class="page"
+            ng-click="handleNavClick(item)"
+            ui-sref="{{item.state}}"
+            ui-sref-active="active"
+            ng-class="['nav-link', 'scrollto']">
+            {{ item.label }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

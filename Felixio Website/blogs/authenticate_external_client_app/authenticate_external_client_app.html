@@ -1,0 +1,70 @@
+<article class="aeca-blog-container">
+
+  <div class="aeca-blog-header">
+      <h1 class="aeca-blog-header-h1">{{ blog.title }}</h1>
+      <p class="aeca-blog-header-intro">{{ blog.intro }}</p>
+  </div>
+  <br><br>
+
+  <section class="aeca-blog-content">
+      <h2 class="aeca-blog-content-h2">🔐 What is OAuth 2.0?</h2>
+      <p class="aeca-blog-content-p">{{ blog.oauthIntro }}</p><br>
+
+      <h2 class="aeca-blog-content-h2">📋 Prerequisites</h2>
+      <ul class="aeca-blog-content-ul">
+          <li ng-repeat="item in blog.prerequisites">{{ item }}</li>
+      </ul><br>
+
+      <h2 class="aeca-blog-content-h2">🔧Create a External Client App in Salesforce</h2>
+      <ol class="aeca-blog-content-ol">
+        <li ng-repeat="step in blog.steps.createApp" ng-bind-html="step"></li>
+            <div class="aeca-blog-image-container">
+                <img src="blogs/authenticate_external_client_app/Images/Screenshot edited 3.png" 
+                    alt="Connected App Setup in Salesforce" 
+                    class="aeca-blog-image">
+            </div>
+        <li ng-repeat="step in blog.steps1.createApp1" ng-bind-html="step"></li>
+      </ol>
+
+      <div class="aeca-blog-image-container">
+        <img src="blogs/authenticate_external_client_app/Images/Screenshot edited 2.jpg" alt="Connected App Setup in Salesforce" class="aeca-blog-image">
+      </div>
+      <br>
+      <br>
+      <h2 class="aeca-blog-content-h2">📡Authorization of External Client App Via Postman</h2>
+      <br>
+      <ul class="aeca-blog-content-ul">
+        <li>
+            Open <strong>Postman</strong>:
+            <ul class="aeca-blog-content-ul">
+                <li>Select <strong>POST</strong> method in the url section </li>
+                <li>Copy past your domain Url before to this url past here/services/oauth2/token </li>
+                <li>Fill it as below Shown </li>
+                <br>
+                <pre class="aeca-blog-content-pre"><code ng-bind="blog.postmanBody"></code></pre>
+            </ul>
+        </li>
+        <div class="aeca-blog-image-container">
+            <img src="blogs/authenticate_external_client_app/Images/Screenshot edited 1.jpg" class="aeca-blog-image">
+        </div>
+        <li>Finally Click on <strong>Send</strong> to get access token</li>
+      </ul><br>
+
+      <h3 class="aeca-blog-content-h3">🧿Make Authenticated API Requests</h3>
+      <p class="aeca-blog-content-p">Use the <strong>access_token</strong> to call Salesforce APIs:</p>
+      <pre class="aeca-blog-content-pre"><code ng-bind="blog.apiCall"></code></pre><br>
+
+      <h3 class="aeca-blog-content-h3">🧿Refresh the Token (When It Expires)</h3>
+      <p class="aeca-blog-content-p">Use the <strong>refresh_token</strong> to get a new <strong>access_token</strong>:</p>
+      <pre class="aeca-blog-content-pre"><code ng-bind="blog.refreshToken"></code></pre><br><br>
+
+      <h2 class="aeca-blog-content-h2">🔒 Security Best Practices</h2>
+      <ul class="aeca-blog-content-ul">
+      <li ng-repeat="tip in blog.securityTips" ng-bind-html="tip"></li>
+      </ul>
+      <br>
+
+      <h2 class="aeca-blog-content-h2">✅ Conclusion</h2>
+      <p class="aeca-blog-content-p" ng-bind-html="blog.conclusion"></p>
+  </section>
+</article>

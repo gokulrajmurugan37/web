@@ -1,0 +1,286 @@
+:root {
+  --primary-color: #0176d3;
+  --secondary-color: #032d60;
+  --accent-color: #0b5cab;
+  --text-color: #181818;
+  --light-text: #ffffff;
+  /* --background-color: #f8f9fa; */
+  --card-bg: #ffffff;
+  --border-color: #dddbda;
+  --success-color: #2e844a;
+  --warning-color: #fe9339;
+  --error-color: #ea001e;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 0.5rem;
+  --section-spacing: 2rem;
+}
+
+.csv-main {
+  width: 1050px;
+  margin: 4rem auto 0;
+  padding: 0px 0 6rem 0px;
+}
+
+.section-order-list {
+  line-height: 1.5rem;
+  padding-bottom: 8px;
+}
+
+/* Headings */
+.csv-head {
+  color: #080707;
+  padding-top: 0.5rem;
+  text-align: center;
+}
+
+.csv-head-h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+.csv-subtitle {
+  padding-top: 1rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+/* Sections */
+.csv-intro-section {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.csv-intro-section:last-child {
+  border-bottom: none;
+}
+
+.csv-intro-section-h2 {
+  font-size: 1.75rem;
+  color: var(--secondary-color);
+  border-left: 4px solid var(--primary-color);
+  padding-left: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.csv-h3 {
+  font-size: 1.25rem;
+  color: var(--accent-color);
+  margin: 1rem 0;
+}
+
+.csv-p {
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}
+
+/* List */
+.csv-ul, .csv-ol {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.csv-image {
+  width: 78%;
+  display: block;
+  margin: 1rem auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.csv-tab-button {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-color);
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.csv-tab-button:hover {
+  background-color: rgba(1, 118, 211, 0.1);
+}
+
+.csv-tab-button.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  background-color: var(--card-bg);
+}
+
+.csv-pre {
+  margin: 0;
+  font-family: 'SF Mono', 'Courier New', Courier, monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #f8f8f2;
+  background-color: #242526;
+  padding: 0.5rem;
+  border-radius: 2px;
+  overflow: auto;
+  height: 500px;
+  white-space: pre;
+  tab-size: 4;
+}
+
+.csv-code {
+  font-family: inherit;
+  color: inherit;
+  display: block;
+  min-width: fit-content;
+}
+
+.csv-code-tabs {
+  display: flex;
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+
+.csv-tab-content {
+  display: none;
+  padding: 0;
+  background-color: var(--card-bg);
+}
+
+.csv-tab-content.active {
+  display: block;
+}
+
+/* Features Grid */
+.csv-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.csv-features-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 1.7rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.csv-features-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.csv-features-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/* Step Description */
+.csv-intro-section-description {
+  margin-bottom: 0.5rem;
+  padding-top: 5px;
+}
+
+/* Responsive Layout - Tablet and Smaller */
+@media (max-width: 1024px) {
+  .csv-main {
+    width: 90%;
+    padding: 0 0 4rem 0;
+  }
+
+  .csv-head-h1 {
+    font-size: 2rem;
+  }
+
+  .csv-intro-section-h2 {
+    font-size: 1.5rem;
+  }
+
+  .csv-h3 {
+    font-size: 1.15rem;
+  }
+
+  .csv-pre {
+    height: 400px;
+  }
+
+  .csv-tab-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .csv-features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/* Responsive Layout - Mobile */
+@media (max-width: 768px) {
+  .csv-main {
+    margin-top: 2rem;
+    padding: 0 0 3rem 0;
+  }
+
+  .csv-head-h1 {
+    font-size: 1.75rem;
+  }
+
+  .csv-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .csv-intro-section-h2 {
+    font-size: 1.3rem;
+  }
+
+  .csv-h3 {
+    font-size: 1.05rem;
+  }
+
+  .csv-pre {
+    height: auto;
+    font-size: 0.8rem;
+  }
+
+  .csv-tab-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .csv-features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .csv-features-card {
+    padding: 1.2rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .csv-head-h1 {
+    font-size: 1.5rem;
+  }
+
+  .csv-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .csv-tab-button {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .csv-features-icon {
+    font-size: 1.5rem;
+  }
+
+  .csv-pre {
+    font-size: 0.75rem;
+  }
+}

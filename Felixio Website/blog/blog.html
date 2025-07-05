@@ -1,0 +1,14 @@
+<div>
+  <main class="blog-main">
+    <h1 class="blog-head">Blogs</h1>
+    <br/><br/><br/>
+
+    <div class="blog-grid">
+      <div class="blog-card" ng-repeat="blog in blogs">
+        <h2 class="blog-card-h2">{{blog.title}}</h2>
+        <p class="blog-card-p">{{blog.date | date:'MMMM d, yyyy'}}</p>
+        <button class="blog-card-read-article" ng-click="goToBlog(blog)">Read article</button>
+      </div>
+    </div>
+  </main>
+</div>

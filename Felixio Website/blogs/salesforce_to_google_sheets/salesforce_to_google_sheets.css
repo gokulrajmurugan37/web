@@ -1,0 +1,100 @@
+.google-sheets-head {
+  color: rgb(8, 7, 7);
+  padding-top: 0.5rem; 
+  text-align: center;
+}
+
+.google-sheets-head-h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+.google-sheets-subtitle {
+    padding-top: 1rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.salesforce-to-google-sheets {
+  width: 1050px;
+  padding: 0 2rem;
+  margin: 4rem auto auto auto;
+}
+
+.toc {
+  background-color: #ffffff;
+  border-left: 4px solid #0e76a8;
+  padding: 1rem 1.5rem;
+  margin: 3.5rem 0rem;
+  border-radius: 8px;
+}
+
+.toc-h3 {
+  margin-top: 0;
+  color:  #032d60;
+}
+
+.toc-ul {
+  list-style: none;
+  padding: 10px 0px;
+}
+
+.toc-li {
+  margin: 0.8rem 0;
+}
+
+.toc-a {
+  color: #0e76a8;
+  text-decoration: none;
+  
+}
+
+.toc-a:hover {
+
+  zoom: 105%;
+  font-weight: bold;
+  color: #174156;
+  animation: alternate;
+
+}
+
+.google-sheets-step-p{
+  margin: 0.5rem 0rem;
+  line-height: 1.5rem;
+}
+
+.google-sheets-step-h2 {
+  color:  #032d60;
+  padding-bottom: 0.5rem;
+}
+
+.google-sheets-step-ul, .google-sheets-step-il {
+  margin-left: 1.2rem;
+  line-height: 2rem;
+
+}
+
+.google-sheets-complete {
+  background-color: #e0ffe0;
+  padding: 1.5rem;
+  border-left: 5px solid green;
+  border-radius: 10px;
+  margin: 5rem 2rem;
+}
+
+.google-sheets-complete-p{
+  padding: 1rem 1rem 0 1rem;
+  line-height: 1.5rem;
+}
+
+.google-sheets-image {
+  width: 100%;
+  max-width: 600px;
+  margin: 2.5rem auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}

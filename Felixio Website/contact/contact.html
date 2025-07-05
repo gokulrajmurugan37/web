@@ -1,0 +1,79 @@
+<div>
+  <div>
+      <header class="contact-header">
+          <h2 class="contact-header-h2">Contact Us</h2>
+      </header>
+  </div>
+  <section class="contact-grid-container">
+      <div class="main-info">
+        <div class="contact-box">
+          <div class="contact-item">
+            <div class="contact-info">
+              <img src="https://img.icons8.com/?size=100&id=9659&format=png&color=228BE6" alt="Call Icon" class="icon" />
+              <h4 class="contact-info-h4">Call Us</h4>
+              <p class="contact-info-p">+91 9751 6423 69</p>
+            </div>
+          </div>
+
+          <br /><br /><br />
+        
+          <div class="contact-item">
+            <div class="contact-info">
+              <img src="https://img.icons8.com/?size=100&id=okvpqeYbG0xb&format=png&color=228BE6" alt="Email Icon" class="icon" />
+              <h4 class="contact-info-h4">Email Us</h4>
+              <p class="contact-info-p">info@felixiotech.com</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="contact-box">
+          <div class="contact-item">
+            <div class="contact-info">
+              <img src="https://img.icons8.com/?size=100&id=9659&format=png&color=228BE6" alt="Call Icon" class="icon" />
+              <h4 class="contact-info-h4">Call Us</h4>
+              <p class="contact-info-p">+91 9751 6423 69</p>
+            </div>
+          </div>
+
+          <br /><br /><br />
+        
+          <div class="contact-item">
+            <div class="contact-info">
+              <img src="https://img.icons8.com/?size=100&id=okvpqeYbG0xb&format=png&color=228BE6" alt="Email Icon" class="icon" />
+              <h4 class="contact-info-h4">Email Us</h4>
+              <p class="contact-info-p">info@felixiotech.com</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      
+      
+      <div>
+        <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+          <form id="salesforceForm"
+            class="contact-form"
+            method="POST"
+            action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdM00000D8uYb"
+            target="hidden_iframe">
+
+          <input class="contact-form-input" type="hidden" name="oid" value="00DdM00000D8uYb">
+          <iframe name="hidden_iframe" style="display:none;"></iframe>
+          <input class="contact-form-input" type="hidden" name="retURL" value="#">
+          <input class="contact-form-input" type="hidden" id="lead_source" name="lead_source" value="Web">
+        
+          <input class="contact-form-input" id="first_name" maxlength="40" name="first_name" type="text" placeholder="Your Name" required />
+          <input class="contact-form-input" id="email" maxlength="80" name="email" type="text" placeholder="Your Email" required />
+          <input class="contact-form-input" id="00NdM00000bIaED" maxlength="255" name="00NdM00000bIaED" type="text" placeholder="Subject" required />
+          <textarea class="contact-form-textarea" id="00NdM00000bIaNt" name="00NdM00000bIaNt" wrap="soft" placeholder="Your Message" required></textarea>
+          
+          <div class="submit-button">
+            <button class="contact-form-button" type="submit">Submit</button>
+          </div>
+        </form>
+        
+        <div class="popup-success" ng-show="successMessage">
+          {{ successMessage }}
+        </div>
+      </div>
+  </section>
+</div>

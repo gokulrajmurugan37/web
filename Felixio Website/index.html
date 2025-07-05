@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="felixioApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Felixio </title>
+  <!-- <base href="/">
+   
+   
+  <base href="index.html"> -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="img/favicon.png" rel="icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Nunito|Poppins" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.1.1/angular-ui-router.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-sanitize.min.js"></script>
+
+
+  <script src="index.js"></script>
+  <script src="./header/header.js"></script>
+  <script src="./footer/footer.js"></script>
+  <script src="./home/home.js"></script>
+  <script src="./about/about.js"></script>
+  <script src="./blog/blog.js"></script>
+  <script src="./services/service.js"></script>
+  <script src="./contact/contact.js"></script>
+  <script src="./blogs/authenticate_external_client_app/authenticate_external_client_app.js"></script>
+  <script src="./blogs/csv_uploader_blog/csvuploader.js"></script>
+  <script src="./blogs/salesforce_to_google_sheets/salesforce_to_google_sheets.js"></script>
+
+  <link href="header/header.css" rel="stylesheet">
+  <link href="footer/footer.css" rel="stylesheet">
+  <link href="home/home.css" rel="stylesheet">
+  <link href="./about/about.css" rel="stylesheet">
+  <link href="./blog/blog.css" rel="stylesheet">
+  <link href="./services/service.css" rel="stylesheet">
+  <link href="./contact/contact.css" rel="stylesheet">
+  <link href="./blogs/csv_uploader_blog/csvuploader.css" rel="stylesheet">
+  <link href="./blogs/salesforce_to_google_sheets/salesforce_to_google_sheets.css" rel="stylesheet">
+  <link href="./blogs/authenticate_external_client_app/authenticate_external_client_app.css" rel="stylesheet">
+
+  
+</head>
+<body ng-app="felixioApp" >
+
+  <div ng-include="'header/header.html'"></div>
+
+  <div ui-view></div>
+  <a href="/"></a>
+
+  <div ng-include="'footer/footer.html'"></div>
+
+</body>
+</html>

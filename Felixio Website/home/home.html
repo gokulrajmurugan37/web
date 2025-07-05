@@ -1,0 +1,114 @@
+<div>  
+   <main id="main" class="main">
+    <!-- ======= Home Section ======= -->
+    <section id="home" class="home">
+      <div class="home-content">
+        <div class="home-left">
+          <h1 class="home-h1 hidden">{{ home.title }}</h1>
+          <div class="home-subtitle">
+            <h2 class="home-subtitle-h2 hidden">{{ home.subtitle }}</h2>
+          </div>
+          <!--
+          <div class="home-buttons">
+            <a class="home-buttons-a btn" ng-href="{{ home.buttonLink }}">
+              <span>{{ home.buttonText }}</span>
+            </a>
+          </div>
+          -->
+        </div>
+        <div class="home-right hidden">
+          <img class="home-right-img" ng-src="{{ home.image }}" alt="Home Image">
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Who We Are Section ======= -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <div class="hero-left hidden">
+          <h3 class="hero-left-h3">{{ heroSection.heading }}</h3>
+          <h2 class="hero-left-h2">{{ heroSection.title }}</h2>
+          <p class="hero-left-p">{{ heroSection.description }}</p>
+          <!--
+          <a class="hero-left-a" ng-href="{{ heroSection.buttonLink }}">
+            <span>{{ heroSection.buttonText }}</span>
+          </a>
+          -->
+        </div>
+        <div class="hero-right hidden">
+          <img class="hero-right-img" ng-src="{{ heroSection.image }}" alt="Hero Image">
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Values Section ======= -->
+    <section id="values">
+      <div class="values-container">
+        <header class="values-header hidden">
+          <h2 class="values-title" ng-bind="OurValues"></h2>
+          <p class="values-description" ng-bind="OurValuesDescription"></p>
+        </header>
+        <div class="values-grid">
+          <div class="value-card hidden" ng-repeat="value in values">
+            <img class="value-image" ng-src="{{ value.img }}" alt="{{ value.title }}">
+            <h3 class="value-title" ng-bind="value.title"></h3>
+            <p class="value-text" ng-bind="value.description"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features-section">
+      <header class="section-head">
+        <h2 class="section-head-h2">Features</h2>
+      </header>
+      <div class="container">
+        <div class="section-header-title">
+          <p class="section-header-title-p">Revolutionize Your Business with Salesforce Solutions</p>
+        </div>
+        <div class="row feature-tabs">
+          <div class="col-left">
+            <!-- Tabs -->
+            <ul class="tabs">
+              <li ng-repeat="tab in tabs">
+                <a href="" 
+                   class="tabs-li-a"
+                   ng-class="{'active': activeTab === tab.id}" 
+                   ng-click="selectTab(tab.id)">
+                  {{tab.title}}
+                </a>
+              </li>
+            </ul>
+            <!-- Tab Content -->
+            <div class="tab-content" ng-repeat="tab in tabs" ng-show="activeTab === tab.id">
+              <p class="intro">{{tab.description}}</p>
+              <div class="feature-point" ng-repeat="point in tab.points">
+                <div class="icon">&#10003;</div>
+                <div>
+                  <h4 class="feature-point-h4">{{point.title}}</h4>
+                  <p class="feature-point-p">{{point.content}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-right">
+            <img class="col-right-img" src="../img/media.png"  alt="Salesforce Features" />
+          </div>
+        </div>
+        <!-- ======= Approach Section ======= -->
+        <div>
+          <h3 class="section-title hidden">Our Approach to Excellence with Salesforce</h3>
+          <div class="approach hidden">
+            <div class="approach-item" ng-repeat="feature in features">
+              <div class="text">
+                <h4 class="text-h4">{{feature.title}}</h4>
+                <p class="text-p">{{feature.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

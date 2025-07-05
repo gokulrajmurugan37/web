@@ -1,0 +1,20 @@
+
+  <section class="services">
+      <header class="service-section-header">
+        <h4 class="service-section-header-h4">Our Services</h4>
+        <h2 class="service-section-header-h2">Unlock Business Potential with Expert Salesforce Solutions</h2>
+      </header>
+  
+      <div class="grid">
+        <div class="grid-item" ng-repeat="service in services">
+          <div class="service-box {{service.color}}">
+            <h3 class="service-box-h3">{{service.title}}</h3>
+            <p class="service-box-p">{{service.description}}</p>
+            <!-- <a href="{{service.link}}" class="read-more">
+              <span ng-style="{'color': service.color}">{{service.linkText}}</span>
+            </a> -->
+          </div>
+        </div>
+      </div>
+  </section>
+

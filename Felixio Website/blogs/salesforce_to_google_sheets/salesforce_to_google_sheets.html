@@ -1,0 +1,63 @@
+<div>
+  <main class="salesforce-to-google-sheets">
+
+    <div id="pageTitle" class="pageTitle" role="banner">
+      <div class="google-sheets-head">
+        <h1 class="google-sheets-head-h1">{{ title }}</h1>
+        <p class="google-sheets-subtitle">{{ subtitle }}</p>
+      </div>
+    </div>
+
+    <nav class="toc">
+      <h3 class="toc-h3">Quick Navigation</h3>
+      <ul class="toc-ul">
+        <li class="toc-li" ng-repeat="item in navItems"><a class="toc-a" href="" ng-click="scrollTo(item.href)">{{item.text}}</a></li>
+        
+      </ul>
+    </nav>
+
+    <section class="google-sheets-step">
+      <h2 class="google-sheets-step-h2" id="overview">Overview</h2>
+      <p class="google-sheets-step-p">{{ overview.intro }}</p>
+      <ul class="google-sheets-step-ul">
+        <li class="google-sheets-step-li" ng-repeat="point in overview.points">{{ point }}</li>
+      </ul>
+      <p class="google-sheets-step-p">{{ overview.description }}</p>
+      <img ng-src="{{ overview.image }}" alt="Integration" class="google-sheets-image" />
+      <br>
+
+      <h2 class="google-sheets-step-h2" id="install">1. Install Sheet Director</h2>
+      <p class="google-sheets-step-p" ng-bind-html="install.step1"></p>
+      <p class="google-sheets-step-p" ng-bind-html="install.step2"></p>
+      <img ng-src="{{ install.image }}" alt="Install Sheet Director Screenshot" class="google-sheets-image">
+      <br>
+     
+      <h2 class="google-sheets-step-h2" id="connect">2. Connect to Salesforce</h2>
+      <p class="google-sheets-step-p" ng-repeat="para in connect.steps" ng-bind-html="para"></p>
+      <img ng-src="{{ connect.image }}" alt="Connecting Salesforce" class="google-sheets-image" />
+      <br>
+
+      <h2 class="google-sheets-step-h2" id="fetch">3. Fetch Salesforce Data</h2>
+      <p class="google-sheets-step-p" ng-repeat="para in fetch.steps" ng-bind-html="para">{{ para }}</p>
+      <img ng-src="{{ fetch.image1 }}" alt="Querying Data" class="google-sheets-image" />
+      <p class="google-sheets-step-p" style="text-align: center;">Example of Data After Execution</p>
+      <img ng-src="{{ fetch.image2 }}" alt="Data in Sheet" class="google-sheets-image" />
+      <br>
+
+      <h2 class="google-sheets-step-h2" id="sync">4. Schedule Automatic Sync (optional)</h2>
+      <p class="google-sheets-step-p" ng-repeat="para in sync.steps" ng-bind-html="para">{{ para }}</p>
+      <br>
+
+      <h2 class="google-sheets-step-h2" id="tips">Tips & Best Practices</h2>
+      <ul class="google-sheets-step-ul">
+        <li class="google-sheets-step-li" ng-repeat="tip in tips" ng-bind-html="tip"></li>
+      </ul>
+    </section>
+    
+    <section class="google-sheets-complete">
+      <h2>🎉 Integration Complete!</h2>
+      <p class="google-sheets-complete-p">{{ done.message1 }}</p>
+      <p class="google-sheets-complete-p">{{ done.message2 }}</p>
+    </section>
+  </main>
+</div>
